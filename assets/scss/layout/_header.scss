@@ -1,0 +1,52 @@
+.main-header {
+    background-color: getColor("secondary");
+    background: linear-gradient(90deg, rgba(22,18,43,1) 0%, rgba(46,53,106,1) 38%, rgba(35,92,159,1) 100%);
+}
+
+.navbar-brand {
+    font-family: getFont("tertiary");
+    font-size: getFontSize("xl");
+    color: getColor("white");
+
+    @media screen and (max-width: 768px) {
+        font-size: getFontSize("l");
+    }
+
+    &:hover,
+    &:focus {
+        color: getColor();
+    }
+}
+
+
+.contacts {
+    span {
+        font-size: getFontSize("sm");
+        line-height: 1;
+        margin: 0 1rem 0 0;
+
+        i {
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.reserve_table {
+    a.btn {
+        font-size: getFontSize("xs");
+        line-height: 1;
+    }
+}
+
+.user-cta {
+    &__btn {
+        font-size: 1.7rem;
+        border-radius: 0;
+        color: getColor("white");
+
+        &:hover,
+        &:focus {
+            color: getColor("primary");
+        }
+    }
+}

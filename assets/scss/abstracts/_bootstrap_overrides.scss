@@ -1,0 +1,4 @@
+$theme-colors: (
+  "primary": map-get($colors, 'primary'),
+  "tertiary": map-get($colors, 'tertiary')
+);

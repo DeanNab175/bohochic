@@ -1,0 +1,18 @@
+.btn {
+    font-family: getFont("tertiary");
+    font-weight: getFontWeight("bold");
+    //border-radius: 25px;
+    line-height: 1;
+    
+    &--reg {
+        font-size: getFontSize();
+        padding: 1.6rem 2rem;
+        min-width: 192px;
+    }
+
+    &--small {
+        font-size: getFontSize("xs");
+        min-width: 150px;
+        padding: 0.9rem 1.5rem;
+    }
+}

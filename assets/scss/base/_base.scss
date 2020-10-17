@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /*
+    *   This defines what 1rem is
+    *    1rem = 10px 
+     */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: map-get($fonts, "primary");
+    color: map-get($colors, "tertiary");
+}

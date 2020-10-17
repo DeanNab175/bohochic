@@ -1,0 +1,60 @@
+/*-------------------------
+Google Fonts
+-------------------------*/
+$josefinFont:       'Josefin Sans', sans-serif;
+$montserratFont:    'Montserrat', sans-serif;
+$pacificoFont:      'Pacifico', cursive;
+$itim: 'Itim', cursive;
+$rubik: 'Rubik', sans-serif;
+$pm: 'Permanent Marker', cursive;
+
+/*-------------------------
+Fonts family
+-------------------------*/
+
+$fonts: (
+    "primary":      $montserratFont,
+    "secondary":    $pacificoFont,
+    "tertiary":     $josefinFont,
+    "itim":         $itim,
+    "rubik":         $rubik,
+    "pm":         $pm,
+);
+
+/*-------------------------
+Fonts size
+-------------------------*/
+$fontSizes: (
+    /**
+    *   Pre-defined font sizes
+    *   1rem = 10px
+    *   xs - extra small (12px)
+    *   sm - small (14px)
+    *   def - default (16px)
+    *   med - medium (18px)
+    *   l - large (20px)
+    *   xl - extra large (30px)
+    *   xxl - extra extra large (4px)
+    */
+    "xs":   1.2rem,
+    "sm":   1.4rem,
+    "def":  1.6rem,
+    "med":  1.8rem,
+    "l":    2rem,
+    "xl":   3rem,
+    "xxl":  4rem
+);
+
+/*-------------------------
+Fonts weight
+-------------------------*/
+$fontWeight: (
+    "thin":         100,
+    "light":        300,
+    "regular":      400,
+    "medium":       500,
+    "semi-bold":    600,
+    "bold":         700,
+    "extra-bold":   800,
+    "black":        900
+);

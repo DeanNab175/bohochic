@@ -1,0 +1,34 @@
+/*-------------------------
+Abstracts styles
+-------------------------*/
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+/*-------------------------
+Custom fonts
+-------------------------*/
+@import 'custom-icon-fonts';
+
+/*-------------------------
+Global styles
+-------------------------*/
+@import 'base/base';
+
+/*-------------------------
+Components styles
+-------------------------*/
+@import 'components/button';
+@import 'components/main-menu';
+@import 'components/search';
+@import 'components/carousel';
+@import 'components/cart';
+
+/*-------------------------
+Layout styles
+-------------------------*/
+@import 'layout/header';
+
+/*-------------------------
+Pages styles
+-------------------------*/

@@ -1,0 +1,38 @@
+/*-------------------------
+Get the site color
+-------------------------*/
+@function getColor($key: "primary") {
+    @return map-get($colors, $key);
+}
+
+/*-------------------------
+Get the site font family
+-------------------------*/
+@function getFont($key: "primary") {
+    @return map-get($fonts, $key);
+}
+
+/*-------------------------
+Get the site pre-defined
+font size
+-------------------------*/
+@function getFontSize($key: "def") {
+    @return map-get($fontSizes, $key);
+}
+
+/*-------------------------
+Get the site pre-defined
+font weight
+-------------------------*/
+@function getFontWeight($key: "regular") {
+    @return map-get($fontWeight, $key);
+}
+
+/*-------------------------
+Calculate letter spacing
+from photoshop letter tracking
+y = (x / 1000) * 1em
+-------------------------*/
+@function calcLetterSpacing($unit) {
+    @return ($unit / 1000) * 1em;
+}
