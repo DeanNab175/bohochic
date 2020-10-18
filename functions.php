@@ -31,6 +31,7 @@ require get_template_directory() . '/inc/theme-setup.php';
 /**
  * Modify woocommerce templates using hooks
  */
-if( class_exists( 'Woocommerce' ) ) :
+if( class_exists( 'WooCommerce' ) ) :
     require get_template_directory() . '/inc/wc-modifications.php';
 endif;
+

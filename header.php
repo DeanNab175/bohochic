@@ -42,13 +42,24 @@
                                             <?php get_search_form(); ?>
                                         </div>
                                     </div>
-                                    <div class="user">
-                                        <a class="user-cta__btn user-cta__signin btn" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>">
-                                            <span class="bc-user"></span>
-                                            <span class="sr-only"><?php _e('My Account', $textdomain); ?></span>
-                                        </a>
-                                    </div>
-                                    <div class="cart">Cart</div>
+                                    <?php if( class_exists( 'WooCommerce' ) ) : ?>
+                                        <div class="user">
+                                            <a class="user-cta__btn user-cta__signin btn" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>">
+                                                <span class="bc-user"></span>
+                                                <span class="sr-only"><?php _e('My Account', $textdomain); ?></span>
+                                            </a>
+                                        </div>
+                                        <div class="mini-cart site-header-cart">
+                                            <a href="<?php echo wc_get_cart_url(); ?>" class="user-cta__btn user-cta__cart btn">
+                                                <span class="bc-cart"></span>
+                                                <span class="badge badge-light item"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                                <span class="sr-only">cart items</span>
+                                            </a>
+                                            <div class="header-mini-cart">
+                                                <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

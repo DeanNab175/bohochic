@@ -79,3 +79,21 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
 endif;
 
 add_action( 'wp', 'bohochic_wc_modify' );
+
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'bohochic_header_add_to_cart_fragment' );
+
+function bohochic_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+    <span class="badge badge-light item"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+	<?php
+	$fragments['span.item'] = ob_get_clean();
+	return $fragments;
+}
