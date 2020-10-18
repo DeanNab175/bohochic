@@ -35,9 +35,19 @@
                                 <?php require "inc/nav.php"; ?>
                             </div>
                             <div class="col-4">
-                                <div class="user-account">
-                                    <div class="search">Search</div>
-                                    <div class="user">User</div>
+                                <div class="user-account d-flex">
+                                    <div class="search">
+                                        <button id="search-btn" type="button" class="user-cta__btn user-cta__search btn"><span class="bc-search"></span></button>
+                                        <div class="widget_product_search">
+                                            <?php get_search_form(); ?>
+                                        </div>
+                                    </div>
+                                    <div class="user">
+                                        <a class="user-cta__btn user-cta__signin btn" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>">
+                                            <span class="bc-user"></span>
+                                            <span class="sr-only"><?php _e('My Account', $textdomain); ?></span>
+                                        </a>
+                                    </div>
                                     <div class="cart">Cart</div>
                                 </div>
                             </div>

@@ -16,6 +16,16 @@ Global styles
 @import 'base/base';
 
 /*-------------------------
+Wordpress global styles
+-------------------------*/
+@import 'base/wp-base';
+
+/*-------------------------
+Woocommerce override styles
+-------------------------*/
+@import 'base/wc-override';
+
+/*-------------------------
 Components styles
 -------------------------*/
 @import 'components/button';

@@ -1,26 +1,22 @@
-<nav id="horizontal-nav-menu" class="horizontal-nav-menu">
-    <!-- <ul class="navbar-nav">
-        <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
-        </li>
-    </ul> -->
-    <?php
-        $args = array(
-            'theme_location'    => 'bohochic_main_menu',
-            'menu'              => 'Primary menu',
-            'menu_class'        => 'navbar-nav',
-            'menu_id'           => 'primary-menu',
-            'container'         => false,
-            'depth'             => 2,
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'          => new WP_Bootstrap_Navwalker(),
-        );
-        wp_nav_menu( $args );
-    ?>
-</nav><!-- .main-menu-nav -->
+<nav class="navbar navbar-expand-md horizontal-nav-menu" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<!--     <a class="navbar-brand" href="#">Navbar</a> -->
+        <?php
+            $args = array(
+                'theme_location'    => 'bohochic_main_menu',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker(),
+            );
+            wp_nav_menu( $args );
+        ?>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+/*-------------------------
+Woocommerce override styles
+-------------------------*/
+// Grid system
+.woocommerce {
+    .col2-set {
+        .col-1,
+        .col-2 {
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

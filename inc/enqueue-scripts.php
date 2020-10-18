@@ -6,7 +6,7 @@
  */
 add_action( 'wp_enqueue_scripts', 'bohochic_scripts' );
 
-if( ! function_exists( 'bohochic_scripts' ) ) {
+if( ! function_exists( 'bohochic_scripts' ) ) :
 
 	function bohochic_scripts() {
 		# --- enqueue styles ---
@@ -31,4 +31,4 @@ if( ! function_exists( 'bohochic_scripts' ) ) {
 		wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true );
 	
 	}
-}
+endif;

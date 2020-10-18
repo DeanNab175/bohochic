@@ -10,7 +10,13 @@
 /**
  * Bootstrap walker menu
  */
-require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+if ( ! file_exists( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php' ) ) {
+    // File does not exist... return an error.
+    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'bohochic' ) );
+} else {
+    // File exists... require it.
+    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
 
 /**
  * Enqueue scripts and styles.
@@ -21,3 +27,10 @@ require get_template_directory() . '/inc/enqueue-scripts.php';
  * Theme setup
  */
 require get_template_directory() . '/inc/theme-setup.php';
+
+/**
+ * Modify woocommerce templates using hooks
+ */
+if( class_exists( 'Woocommerce' ) ) :
+    require get_template_directory() . '/inc/wc-modifications.php';
+endif;
