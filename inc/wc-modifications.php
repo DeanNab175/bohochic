@@ -8,6 +8,7 @@
  */
 
 if( ! function_exists( 'bohochic_wc_modify' ) ) :
+    
     function bohochic_wc_modify() {
         /**
          * Modify woocommerce opening/closing HTML tags
