@@ -5,7 +5,6 @@
  * =============================================================
  */
 add_action( 'wp_enqueue_scripts', 'bohochic_scripts' );
-
 if( ! function_exists( 'bohochic_scripts' ) ) :
 
 	function bohochic_scripts() {
