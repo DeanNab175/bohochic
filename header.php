@@ -24,17 +24,28 @@
     <header class="main-header">
         <section class="navigation-bar">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-3">
-                        <div class="brand">Brand</div>
+                        <div class="brand">
+                            <a href="<?php echo home_url( '/' ); ?>">
+                                <?php
+                                if( has_custom_logo() ) :
+                                    the_custom_logo();
+                                else :
+                                ?>
+                                    <p class="site-title"><?php bloginfo( 'title' ); ?></p>
+                                    <span><?php bloginfo( 'description' ); ?></span>
+                                <?php endif; ?>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-9">
                         <div class="menu">
-                        <div class="row">
-                            <div class="col-8">
+                        <div class="row flex-row-reverse flex-md-row">
+                            <div class="col-3 col-md-8">
                                 <?php require "inc/nav.php"; ?>
                             </div>
-                            <div class="col-4">
+                            <div class="col-9 col-md-4 align-self-center">
                                 <div class="user-account d-flex justify-content-end align-items-center">
                                     <div class="search">
                                         <button id="search-btn" type="button" class="user-cta__btn user-cta__search btn"><span class="bc-search"></span></button>
@@ -59,10 +70,6 @@
                                                     $username = __('log in', $textdomain);
                                                     $url = esc_url( wp_login_url() );
                                             endif;
-                                            /* if ( ! ( $current_user instanceof WP_User ) ) :
-                                                return;
-                                            else :
-                                            endif; */
 
                                         ?>
                                         <a class="user-cta__btn user-cta__signin btn" href="<?php echo $url; ?>">
@@ -76,7 +83,7 @@
                                         <div class="mini-cart site-header-cart">
                                             <a href="<?php echo wc_get_cart_url(); ?>" class="user-cta__btn user-cta__cart btn">
                                                 <span class="bc-cart"></span>
-                                                <span class="badge badge-light item"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                                <span class="badge badge-pill item"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                                 <span class="sr-only">cart items</span>
                                             </a>
                                             <div class="header-mini-cart">

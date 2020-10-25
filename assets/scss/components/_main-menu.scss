@@ -1,45 +1,43 @@
-.hamburger {
+.hamburger-btn {
+    border-radius: 0;
+}
 
-    &__btn {
-        border-radius: 0;
-    }
+.hamburger-toggler-icon {
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    display: block;
 
-    &__toggler-icon {
-        width: 4rem;
-        height: 2.5rem;
-        position: relative;
-        display: block;
+    .bar {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: getColor("white");
+        right: 0;
+        border-radius: 15px;
 
-        .bar {
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            background-color: getColor("black");
-            right: 0;
-            border-radius: 15px;
+        &:first-of-type {
+            top: 0;
+            width: 45%;
+        }
 
-            &:first-of-type {
-                top: 0;
-                width: 45%;
-            }
+        &:nth-of-type(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 80%;
+        }
 
-            &:nth-of-type(2) {
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                width: 80%;
-            }
-
-            &:last-of-type {
-                bottom: 0;
-            }
+        &:last-of-type {
+            bottom: 0;
         }
     }
 }
 
 .horizontal-nav-menu {
-    margin: 0 1rem 0 0;
-    /* position: absolute;
+    padding: 0;
+    /* margin: 0 1rem 0 0;
+    position: absolute;
     top: 8rem;
     left: -4rem;
     background-color: getColor();
@@ -57,6 +55,7 @@
     .nav-item {
         //border-bottom: 1px solid rgba(getColor("dark-green"), .4);
         display: inline-block;
+        margin: 0 1rem;
 
         &.active {
             .nav-link {

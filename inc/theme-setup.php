@@ -34,6 +34,20 @@ if ( ! function_exists( 'bohochic_setup' ) ) :
         add_theme_support( 'wc-product-gallery-lightbox' );
         add_theme_support( 'wc-product-gallery-slider' );
 
+        /**
+         * Add theme support for custom logo
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'        => 160,
+            'width'         => 160,
+            'flex_height'   => true,
+            'flex_width'   => true,
+            'unlink-homepage-logo' => true,
+        ) );
+
+        add_image_size( 'bohochic-slider', 1920, 800, array( 'center', 'center' ) );
+
         // Theme content width
         if ( ! isset( $content_width ) ) {
             $content_width = 600;
