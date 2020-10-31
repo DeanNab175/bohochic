@@ -2,11 +2,12 @@
     //$('.carousel').carousel();
     $(".owl-carousel").owlCarousel({
         items: 1,
-        autoplay: false,
-        loop: false,
+        autoplay: true,
+        loop: true,
         smartSpeed: 1500,
         nav: true,
-        navText: ['<span class="bc-prev"></span>', '<span class="bc-next"></span>']
+        navText: ['<span class="bc-prev"></span>', '<span class="bc-next"></span>'],
+        autoplayHoverPause: true
         //autoWidth: true
         //nav: true
     });

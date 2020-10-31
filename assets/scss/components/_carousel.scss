@@ -31,63 +31,98 @@ Owl carousel
         //height: 600px;
     }
 
+    .owl-nav {
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        
+        button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 40px;
+
+            &.owl-prev {
+                left: 4rem;
+            }
+
+            &.owl-next {
+                right: 4rem;
+            }
+
+            &.disabled {
+                opacity: .3;
+            }
+
+            span {
+                font-size: getFontSize("xxl");
+                color: getColor("white");
+            }
+        }
+    }
+
+    .owl-dots {
+        padding: 1rem 2rem 4rem;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        .owl-dot {
+            margin: 0 1rem 0 0;
+            span {
+                display: block;
+                width: 15px;
+                height: 15px;
+                border: 2px solid getColor("white");
+                border-radius: 50%;
+            }
+
+            &.active {
+                span {
+                    border-color: getColor();
+                    background-color: getColor();
+                }
+            }
+        }
+    }
+
     .slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        //height: 750px;
-        padding: 5rem 0 6rem;
+        height: 450px;
         position: relative;
 
-        @media screen and (max-width: 768px) {
-            flex-direction: column-reverse;
+        @include media-breakpoint-up(md) {
+            height: 700px;
         }
 
         &__details {
-            /* padding: 2rem;
-            background-color: getColor("secondary"); */
-            width: 30%;
-            /* position: absolute;
-            top: 2rem;
-            right: 2rem;
-            z-index: 1; */
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            background: rgb(22,18,43);
+            background: linear-gradient(90deg, rgba(22,18,43,0.6) 0%, rgba(22,18,43,0.4) 60%, rgba(22,18,43,0) 100%);
 
-            @media screen and (max-width: 768px) {
-                width: 90%;
-            }
-
-            /*&:before {
-                content: "";
-                width: 10rem;
-                height: 100%;
-                background-color: inherit;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: -5rem;
-                transform: skew(-10deg);
-                z-index: -1;
-            }*/
         }
 
         &__details-wrap {
-            text-align: center;
             color: getColor("white");
+            width: 90%;
+            margin: 0 auto;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                margin: 0;
+            }
         }
 
         &__image-box {
-            width: 600px;
-            height: 600px;
-            box-shadow: 24px 30px 40px 0 rgba(getColor("secondary"),0.4);
-
-            @media screen and (max-width: 768px) {
-                width: 300px;
-                height: 300px;
-                margin: 0 0 4rem;
-            }
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         &__img {
@@ -122,57 +157,4 @@ Owl carousel
         }
     }
 
-    .owl-nav {
-        @media screen and (max-width: 768px) {
-            display: none;
-        }
-        
-        button {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            height: 40px;
-
-            &.owl-prev {
-                left: 4rem;
-            }
-
-            &.owl-next {
-                right: 4rem;
-            }
-
-            &.disabled {
-                opacity: .3;
-            }
-
-            span {
-                font-size: getFontSize("xxl");
-                color: getColor("primary");
-            }
-        }
-    }
-
-    .owl-dots {
-        padding: 1rem 2rem 4rem;
-        text-align: center;
-
-        .owl-dot {
-            margin: 0 1rem 0 0;
-            span {
-                display: block;
-                width: 15px;
-                height: 15px;
-                border: 2px solid getColor("white");
-                border-radius: 50%;
-            }
-
-            &.active {
-                span {
-                    border-color: getColor();
-                    background-color: getColor();
-                }
-            }
-        }
-    }
 }

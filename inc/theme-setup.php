@@ -46,7 +46,7 @@ if ( ! function_exists( 'bohochic_setup' ) ) :
             'unlink-homepage-logo' => true,
         ) );
 
-        add_image_size( 'bohochic-slider', 1920, 800, array( 'center', 'center' ) );
+        add_image_size( 'bohochic-slider', 1920, 700, array( 'center', 'center' ) );
 
         // Theme content width
         if ( ! isset( $content_width ) ) {

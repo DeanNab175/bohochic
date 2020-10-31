@@ -4,14 +4,20 @@ $tertiaryColor: #262625;
 
 $blackColor: #000000; */
 
+$pink: #D95970;
+$blue-light:#3E498C;
+$blue:#323C73;
+$blue-dark:#1C2140;
+$blue-sky: #89D9D9;
+
 $colors: (
-    "primary":     #a1755c,
-    "secondary":   #16122b,
-    "tertiary":     #262625,
+    "primary":     $blue-light,
+    "secondary":   $pink,
+    "tertiary":    $blue-dark,
 
     "black":        #000000,
     "white":        #f2f2f2,
     
     "dark-green":     #41593b,
-    "grey":         #e0e0e0
+    "grey":         #e0e0e0,
 );

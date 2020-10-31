@@ -1,20 +1,48 @@
 .main-header {
-    background-color: getColor("secondary");
-    background: linear-gradient(90deg, rgba(22,18,43,1) 0%, rgba(46,53,106,1) 38%, rgba(35,92,159,1) 100%);
+    padding: 1rem 0;
+    background-color: getColor("white");
+    //background: linear-gradient(90deg, rgba(22,18,43,1) 0%, rgba(46,53,106,1) 38%, rgba(35,92,159,1) 100%);
+}
+
+.brand-logo {
+    width: 15%;
 }
 
 .navbar-brand {
-    font-family: getFont("tertiary");
-    font-size: getFontSize("xl");
-    color: getColor("white");
+    width: 80px;
 
     @media screen and (max-width: 768px) {
         font-size: getFontSize("l");
     }
 
+    &.navbar-brand-text {
+        width: 100%;
+        white-space: normal;
+
+        .site-title {
+            font-family: getFont("pm");
+            font-size: getFontSize("med");
+            color: getColor("black");
+            line-height: 1;
+            margin: 0 0 0.3rem;
+        }
+
+        .site-tagline {
+            font-family: getFont("primary");
+            font-size: getFontSize("sm");
+            color: getColor("black");
+            line-height: 1;
+        }
+    }
+
     &:hover,
     &:focus {
         color: getColor();
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -28,6 +56,14 @@
         i {
             margin: 0 1rem 0 0;
         }
+    }
+}
+
+.user-account {
+    margin: 0 1rem 0 0;
+
+    @include media-breakpoint-up(md) {
+        margin: 0;
     }
 }
 
@@ -50,18 +86,11 @@
     &__btn {
         font-size: 1.7rem;
         border-radius: 0;
-        color: getColor("white");
+        color: getColor("black");
 
         &:hover,
         &:focus {
             color: getColor("primary");
         }
-    }
-}
-
-.navbar-brand {
-    img {
-        width: 80px;
-        height: auto;
     }
 }

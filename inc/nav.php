@@ -1,18 +1,21 @@
 <nav class="navbar navbar-expand-md horizontal-nav-menu" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+        <div class="brand-logo">
             <?php
             if( has_custom_logo() ) :
                 the_custom_logo();
+                //echo get_custom_logo();
             else :
             ?>
-                <p class="site-title"><?php bloginfo( 'title' ); ?></p>
-                <span><?php bloginfo( 'description' ); ?></span>
+                <a class="navbar-brand navbar-brand-text" href="<?php echo home_url( '/' ); ?>">
+                    <p class="site-title"><?php bloginfo( 'title' ); ?></p>
+                    <span class="site-tagline"><?php bloginfo( 'description' ); ?></span>
+                </a>
             <?php endif; ?>
-        </a>
+        </div>
         <div class="menu">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler hamburger-btn" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+            <button class="navbar-toggler hamburger-btn" type="button" data-toggle="collapse" data-target="#bohochic-navbar-collapse" aria-controls="bohochic-navbar-collapse" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
                 <span class="navbar-toggler-icon hamburger-toggler-icon">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -25,8 +28,8 @@
                     'theme_location'    => 'bohochic_main_menu',
                     'depth'             => 2,
                     'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'container_class'   => 'collapse navbar-collapse bohochic-navbar-collapse',
+                    'container_id'      => 'bohochic-navbar-collapse',
                     'menu_class'        => 'nav navbar-nav',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),

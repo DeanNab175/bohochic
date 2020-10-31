@@ -35,3 +35,18 @@ if( class_exists( 'WooCommerce' ) ) :
     require get_template_directory() . '/inc/wc-modifications.php';
 endif;
 
+
+/**
+ * Theme customizer
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+
+/**
+ * Add classes to the cutom logo.
+ */
+add_filter( 'get_custom_logo', function($html) {
+    $html = str_replace( 'custom-logo-link', 'custom-logo-link navbar-brand', $html );
+    
+    return $html;
+});
