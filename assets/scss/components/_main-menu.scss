@@ -86,10 +86,11 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    width: 85%;
+    width: 65%;
 
     @include media-breakpoint-up(md) {
         flex-direction: row;
+        width: 85%;
     }
 }
 
@@ -99,9 +100,16 @@
     top: 100%;
     width: 100%;
     left: 0;
-    z-index: 2;
+    z-index: 12;
     background-color: getColor("white");
+    padding: 0 0 2rem 0;
     
+    @include media-breakpoint-up(md) {
+        margin: 0 2rem 0 0;
+        position: static;
+        padding: 0;
+    }
+
     &.navbar-collapse {
         @include media-breakpoint-up(md) {
             flex: 1 1 0;
@@ -109,8 +117,4 @@
         }
     }
     
-    @include media-breakpoint-up(md) {
-        margin: 0 2rem 0 0;
-        position: static;
-    }
 }

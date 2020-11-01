@@ -43,10 +43,6 @@ require get_template_directory() . '/inc/customizer.php';
 
 
 /**
- * Add classes to the cutom logo.
+ * Functions which enhance the theme by hooking into WordPress.
  */
-add_filter( 'get_custom_logo', function($html) {
-    $html = str_replace( 'custom-logo-link', 'custom-logo-link navbar-brand', $html );
-    
-    return $html;
-});
+require get_template_directory() . '/inc/template-functions.php';

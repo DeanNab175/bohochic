@@ -32,8 +32,10 @@ Owl carousel
     }
 
     .owl-nav {
-        @media screen and (max-width: 768px) {
-            display: none;
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: block;
         }
         
         button {
@@ -68,6 +70,10 @@ Owl carousel
         position: absolute;
         width: 100%;
         bottom: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 1rem 2rem;
+        }
 
         .owl-dot {
             margin: 0 1rem 0 0;

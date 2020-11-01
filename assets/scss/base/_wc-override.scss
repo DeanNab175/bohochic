@@ -16,3 +16,26 @@ Woocommerce override styles
         }
     }
 }
+
+// Buttons
+.woocommerce a.button,
+.woocommerce button.button.alt {
+    font-size: getFontSize("sm");
+    padding: 1.2rem 2rem;
+    text-align: center;
+    background-color: getColor("primary");
+    color: getColor("white");
+    font-weight: getFontWeight("regular");
+    border-radius: 25px;
+    width: auto;
+}
+
+.woocommerce {
+    ul.products li.product {
+        .woocommerce-loop-product__title {
+            font-family: getFont("primary");
+            font-size: getFontSize("def");
+            line-height: 1;
+        }
+    }
+}

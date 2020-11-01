@@ -5,7 +5,11 @@
 }
 
 .brand-logo {
-    width: 15%;
+    width: 35%;
+
+    @include media-breakpoint-up(md) {
+        width: 15%;
+    }
 }
 
 .navbar-brand {

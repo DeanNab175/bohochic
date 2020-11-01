@@ -17,8 +17,8 @@ if ( ! function_exists( 'bohochic_setup' ) ) :
 
         // Declaring WooCommerce Support
         add_theme_support( 'woocommerce', array(
-            'thumbnail_image_width' => 150,
-            'single_image_width'    => 300,
+            'thumbnail_image_width' => 300,
+            'single_image_width'    => 600,
     
             'product_grid'          => array(
                 'default_rows'    => 3,

@@ -36,7 +36,7 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
              */
             add_action( 'woocommerce_before_main_content', 'bohochic_open_sidebar_col', 6 );
             function bohochic_open_sidebar_col() {
-                echo '<div class="sidebar-shop col col-md-3">';
+                echo '<div class="sidebar-shop col-12 col-md-3 order-last order-md-first">';
             }
 
             /**
@@ -62,9 +62,9 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
         add_action( 'woocommerce_before_main_content', 'bohochic_open_shop_product_col', 9 );
         function bohochic_open_shop_product_col() {
             if( is_shop() ) :
-                echo '<div class="shop-product col col-md-9">';
+                echo '<div class="shop-product col-12 col-md-9 order-md-last order-first">';
             else :
-                echo '<div class="shop-product col">';
+                echo '<div class="shop-product col-12">';
             endif;
         }
 

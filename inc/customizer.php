@@ -31,7 +31,10 @@ function bohochic_customize_register( $wp_customize ) {
             'panel'             => 'panel_bohochic_settings'
         )
     );
+
+        // Number of slides
         $num_silde = 3;
+
         for ( $i = 1; $i < ($num_silde + 1); $i++ ) :
             // Field 1 - Slider page number 1
             $wp_customize->add_setting(
