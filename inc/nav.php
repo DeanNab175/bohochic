@@ -15,7 +15,7 @@
         </div>
         <div class="menu">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler hamburger-btn" type="button" data-toggle="collapse" data-target="#bohochic-navbar-collapse" aria-controls="bohochic-navbar-collapse" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+            <button class="navbar-toggler hamburger-btn collapsed" type="button" data-toggle="collapse" data-target="#bohochic-navbar-collapse" aria-controls="bohochic-navbar-collapse" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
                 <span class="navbar-toggler-icon hamburger-toggler-icon">
                     <span class="bar"></span>
                     <span class="bar"></span>

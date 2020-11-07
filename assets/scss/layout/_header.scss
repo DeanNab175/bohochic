@@ -1,7 +1,21 @@
 .main-header {
     padding: 1rem 0;
     background-color: getColor("white");
+    transition: padding .3s ease-in-out;
     //background: linear-gradient(90deg, rgba(22,18,43,1) 0%, rgba(46,53,106,1) 38%, rgba(35,92,159,1) 100%);
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        padding: 0;
+
+        .navbar-brand {
+            width: 65px;
+        }
+    }
 }
 
 .brand-logo {
@@ -14,6 +28,7 @@
 
 .navbar-brand {
     width: 80px;
+    transition: width .3s ease-in-out;
 
     @media screen and (max-width: 768px) {
         font-size: getFontSize("l");

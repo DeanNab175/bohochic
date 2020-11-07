@@ -1,5 +1,26 @@
 .hamburger-btn {
     border-radius: 0;
+
+    &.collapsed {
+        .hamburger-toggler-icon {
+            .bar {
+                &:first-of-type {
+                    width: 45%;
+                    transform: translate(0, 0) rotate(0);
+                }
+
+                &:nth-of-type(2) {
+                    width: 80%;
+                    transform: translate(0, 0) rotate(0);
+                    opacity: 1;
+                }
+
+                &:last-of-type {
+                    transform: translate(0, 0) rotate(0);
+                }
+            }
+        }
+    }
 }
 
 .hamburger-toggler-icon {
@@ -15,21 +36,28 @@
         background-color: getColor("black");
         right: 0;
         border-radius: 15px;
+        transform-origin: center;
+        transform: translate(0, 0) rotate(0);
+        transition: all .3s ease-in-out;
 
         &:first-of-type {
             top: 0;
-            width: 45%;
+            transform: translate(0, 9px) rotate(-45deg);
+            //width: 45%;
         }
 
         &:nth-of-type(2) {
             top: 0;
             bottom: 0;
             margin: auto;
-            width: 80%;
+            transform: translate(-10px, 0) rotate(0);
+            opacity: 0;
+            //width: 80%;
         }
 
         &:last-of-type {
             bottom: 0;
+            transform: translate(0, -9px) rotate(45deg);
         }
     }
 }

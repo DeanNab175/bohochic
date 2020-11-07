@@ -1,4 +1,13 @@
 (function($){
+
+    /*------------------------------------
+      Variables declaration           
+    ------------------------------------*/
+    var $window = $(window);
+    const $mainMenu = document.querySelector('.main-header');
+    
+    //console.log(menuHeight);
+
     //$('.carousel').carousel();
     $(".owl-carousel").owlCarousel({
         items: 1,
@@ -19,12 +28,46 @@
         toggleClass( 'show', $searchBox );
     });
 
+
+
+    /**
+     * listen to scroll event
+     * and fires the stickyMenu function
+     */
+    window.addEventListener('scroll', function() {
+        stickyMenu($mainMenu);
+    });
+
 })(jQuery);
 
+/*------------------------------------
+      Toggle class           
+------------------------------------*/
 function toggleClass( elClass, el ) {
     if( el.hasClass( elClass ) ) {
         el.removeClass( elClass );
     } else {
         el.addClass( elClass )
+    }
+}
+
+
+/*------------------------------------
+      Sticky menu on scroll           
+------------------------------------*/
+/**
+ * if the page vertical offset is
+ * greater than the menu bar height
+ * add the sticky class else remove it
+ */
+function stickyMenu(el) {
+    const menuHeight = el.offsetHeight;
+    console.log(window.scrollY, menuHeight, el);
+
+    if( (window.scrollY) > menuHeight ) {
+        el.classList.add('sticky');
+    }
+    else {
+        el.classList.remove('sticky');
     }
 }
