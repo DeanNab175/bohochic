@@ -30,14 +30,52 @@ Woocommerce override styles
     width: auto;
 }
 
-// Product title
 .woocommerce {
     ul.products li.product {
+
+        // Product title
         .woocommerce-loop-product__title {
             font-family: getFont("primary");
             font-size: getFontSize("def");
             color: getColor("secondary");
             line-height: 1;
         }
+
+        // Product price
+        .price {
+            font-size: getFontSize('med');
+            color: getColor("secondary");
+            font-weight: getFontWeight("bold");
+
+            del {
+                font-size: getFontSize('sm');
+                margin-right: .5rem;
+            }
+        }
+
+        // View cart link
+        a.added_to_cart {
+            &.wc-forward {
+                margin-left: 1rem;
+                font-size: getFontSize("sm");
+                color: getColor("secondary");
+                text-decoration: underline;
+            }
+        }
     }
 }
+
+.woocommerce {
+    span.onsale {
+        background-color: getColor("tertiary");
+        min-height: auto;
+        min-width: auto;
+        padding: 0.5rem 0.7rem;
+        font-weight: getFontWeight("medium");
+        line-height: 1;
+        border-radius: 5px;
+        font-size: getFontSize('sm');
+    }
+}
+
+
