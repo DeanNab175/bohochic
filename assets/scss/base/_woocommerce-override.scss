@@ -66,6 +66,7 @@ Woocommerce override styles
 }
 
 .woocommerce {
+    // On sale badge
     span.onsale {
         background-color: getColor("tertiary");
         min-height: auto;
@@ -74,7 +75,16 @@ Woocommerce override styles
         font-weight: getFontWeight("medium");
         line-height: 1;
         border-radius: 5px;
-        font-size: getFontSize('sm');
+        font-size: getFontSize('xs');
+        letter-spacing: calcLetterSpacing(75);
+    }
+
+    // Product description
+    .product {
+        p {
+            font-size: getFontSize('xs');
+            color: getColor("secondary");
+        }
     }
 }
 

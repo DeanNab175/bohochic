@@ -2,7 +2,9 @@
     <div class="search">
         <button id="search-btn" type="button" class="user-cta__btn user-cta__search btn"><span class="bc-search"></span></button>
         <div class="widget_product_search">
-            <?php get_search_form(); ?>
+            <div class="container">
+                <?php get_search_form(); ?>
+            </div>
         </div>
     </div>
 

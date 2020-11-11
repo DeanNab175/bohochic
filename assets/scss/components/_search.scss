@@ -2,16 +2,19 @@
 *   Search form styles
 */
 .search-form {
+    width: 100%;
+
     input[type=search] {
         border: none;
         border: 1px solid getColor("secondary");
         padding: 1rem;
-        width: 75%;
+        width: 80%;
         font-size: getFontSize("xs");
     }
 
     button[type=submit] {
-        width: 40px;
+        width: 5%;
+        min-width: 40px;
         border: none;
         border: 1px solid getColor("secondary");
         background-color: getColor("secondary");
@@ -38,12 +41,14 @@
     text-align: center;
 
     &.show {
-        top: 115%;
+        top: 100%;
         opacity: 1;
         visibility: visible;
     }
 
     input[type=search] {
-        width: 85%;
+        @include media-breakpoint-up(md) {
+            width: 90%;
+        }
     }
 }
