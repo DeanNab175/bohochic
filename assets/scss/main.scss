@@ -23,7 +23,7 @@ Wordpress global styles
 /*-------------------------
 Woocommerce override styles
 -------------------------*/
-@import 'base/wc-override';
+@import 'base/woocommerce-override';
 
 /*-------------------------
 Components styles
@@ -42,3 +42,4 @@ Layout styles
 /*-------------------------
 Pages styles
 -------------------------*/
+@import 'page/home';

@@ -1,40 +1,18 @@
 /*-------------------------
 Google Fonts
 -------------------------*/
-$josefinFont:       'Josefin Sans', sans-serif;
-$montserratFont:    'Montserrat', sans-serif;
-$pacificoFont:      'Pacifico', cursive;
-$itim: 'Itim', cursive;
-$rubik: 'Rubik', sans-serif;
-$pm: 'Permanent Marker', cursive;
-$anton: 'Anton', sans-serif;
-$paytone: 'Paytone One', sans-serif;
-$cpo: 'Chau Philomene One', sans-serif;
-$jua: 'Jua', sans-serif;
-$wendy: 'Wendy One', sans-serif;
-$notable: 'Notable', sans-serif;
-$stylish: 'Stylish', sans-serif;
-$didact: 'Didact Gothic', sans-serif;
+$quicksandFont:    'Quicksand', sans-serif;
+$paytoneFont:    'Paytone One', sans-serif;
+$leckerliFont:    'Leckerli One', cursive;
 
 /*-------------------------
 Fonts family
 -------------------------*/
 
 $fonts: (
-    "primary":      $montserratFont,
-    "secondary":    $pacificoFont,
-    "tertiary":     $josefinFont,
-    "itim":         $itim,
-    "rubik":        $rubik,
-    "pm":           $pm,
-    "anton":           $anton,
-    "paytone":           $paytone,
-    "cpo":           $cpo,
-    "jua":           $jua,
-    "wendy":           $wendy,
-    "notable":           $notable,
-    "stylish":           $stylish,
-    "didact":           $didact,
+    "primary":      $quicksandFont,
+    "secondary":    $paytoneFont,
+    "tertiary":     $leckerliFont,
 );
 
 /*-------------------------

@@ -25,16 +25,18 @@ Woocommerce override styles
     text-align: center;
     background-color: getColor("primary");
     color: getColor("white");
-    font-weight: getFontWeight("regular");
-    border-radius: 25px;
+    font-weight: getFontWeight("semi-bold");
+    border-radius: 5px;
     width: auto;
 }
 
+// Product title
 .woocommerce {
     ul.products li.product {
         .woocommerce-loop-product__title {
             font-family: getFont("primary");
             font-size: getFontSize("def");
+            color: getColor("secondary");
             line-height: 1;
         }
     }

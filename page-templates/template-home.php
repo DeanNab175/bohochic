@@ -72,14 +72,14 @@ get_header();
                     $new_arrivals_limit = get_theme_mod( 'set_new_arrivals_max_num', 4 );
                     $new_arrivals_col   = get_theme_mod( 'set_new_arrivals_max_col', 4 );
                 ?>
-                <h2><?php _e('Popular products', 'bohochic'); ?></h2>
+                <h2 class="section-title"><?php _e('Popular products', 'bohochic'); ?></h2>
                 <?php echo do_shortcode( '[products limit="'. $popular_limit .'" columns="'. $popular_col .'" orderby="popularity"]' ); ?>
             </div>
         </section><!-- .popular-products -->
 
         <section class="new-arrivals">
             <div class="container">
-                <h2><?php _e('New arrivals', 'bohochic'); ?></h2>
+                <h2 class="section-title"><?php _e('New arrivals', 'bohochic'); ?></h2>
                 <?php echo do_shortcode( '[products limit="'. $new_arrivals_limit .'" columns="'. $new_arrivals_col .'" orderby="date"]' ); ?>
             </div>
         </section><!-- .new-arrivals -->

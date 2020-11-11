@@ -6,9 +6,9 @@ button {
 
 .button,
 .btn {
-    font-family: getFont("rubik");
-    font-weight: getFontWeight("regular");
-    //border-radius: 25px;
+    font-family: getFont("primary");
+    font-weight: getFontWeight("medium");
+    border-radius: 5px;
     line-height: 1;
 }
 

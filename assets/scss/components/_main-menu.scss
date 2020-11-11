@@ -90,14 +90,14 @@
         &.active {
             .nav-link {
                 color: getColor("primary");
-                font-weight: getFontWeight("semi-bold");
             }
         }
     }
 
     .nav-link {
-        color: getColor("tertiary");
-        font-size: getFontSize("def");
+        color: getColor("secondary");
+        font-weight: getFontWeight("semi-bold");
+        font-size: getFontSize("sm");
         line-height: 1;
         letter-spacing: calcLetterSpacing(75);
         padding: 1.5rem;

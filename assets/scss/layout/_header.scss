@@ -10,9 +10,9 @@
         left: 0;
         width: 100%;
         z-index: 20;
-        padding: 0;
+        padding: .5rem 0;
 
-        .navbar-brand {
+        .navbar-brand:not(.navbar-brand-text) {
             width: 65px;
         }
     }
@@ -30,20 +30,21 @@
     width: 80px;
     transition: width .3s ease-in-out;
 
-    @media screen and (max-width: 768px) {
-        font-size: getFontSize("l");
-    }
-
+    
     &.navbar-brand-text {
         width: 100%;
         white-space: normal;
-
+        
         .site-title {
-            font-family: getFont("pm");
+            font-family: getFont("tertiary");
             font-size: getFontSize("med");
             color: getColor("black");
             line-height: 1;
             margin: 0 0 0.3rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: getFontSize("sm");
+            }
         }
 
         .site-tagline {
@@ -51,6 +52,10 @@
             font-size: getFontSize("sm");
             color: getColor("black");
             line-height: 1;
+
+            @media screen and (max-width: 768px) {
+                font-size: getFontSize("xs");
+            }
         }
     }
 

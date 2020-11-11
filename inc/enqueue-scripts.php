@@ -19,7 +19,7 @@ if( ! function_exists( 'bohochic_scripts' ) ) :
 		wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/vendor/fontawesome/all.css', array(), '5.14.0', 'all' );
 	
 		// App & fonts
-		wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Pacifico&display=swap&family=Itim&display=swap&family=Rubik:wght@400;600;800;900&display=swap&Permanent+Marker&display=swap&family=Anton&display=swap&family=Paytone+One&display=swap&family=Chau+Philomene+One&display=swap&family=Jua&display=swap&family=Wendy+One&display=swap&family=Notable&display=swap&family=Stylish&display=swap&family=Didact+Gothic&display=swap', array(), null, 'all' );
+		wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap&family=Paytone+One&display=swap&family=Leckerli+One&display=swap', array(), null, 'all' );
 		wp_enqueue_style( 'bohochic-css', get_template_directory_uri() . '/assets/css/main.min.css', array(), '1.0.0', 'all' );
 	
 		# --- enqueue scripts ---
