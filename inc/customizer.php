@@ -102,7 +102,7 @@ function bohochic_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'sec_homepage',
         array(
-            'title'             => __('Homepage settings', 'bohochic'),
+            'title'             => __('Homepage products settings', 'bohochic'),
             'description'       => __('Homepage products and blog settings', 'bohochic'),
             'panel'             => 'panel_bohochic_settings'
         )
@@ -185,5 +185,65 @@ function bohochic_customize_register( $wp_customize ) {
                 'type'              => 'number'
             )
         );
+
+
+    /**
+     * ------------------------------------------------------------------------
+     */
+    require get_template_directory() . '/inc/customizer-controls/dropdown-category.php';
+    
+    /* $orderby = 'name';
+    $order = 'asc';
+    $hide_empty = false ;
+
+    $cat_args = array(
+        'orderby'    => $orderby,
+        'order'      => $order,
+        'hide_empty' => $hide_empty,
+    );
+ 
+    $product_categories = get_terms( 'product_cat', $cat_args ); */
+
+    //var_dump($product_categories);die();
+
+    // Homepage product categories settings
+    $wp_customize->add_section(
+        'sec_homepage_product_categories',
+        array(
+            'title'             => __('Homepage product categories settings', 'bohochic'),
+            'description'       => __('Homepage product categories settings', 'bohochic'),
+            'panel'             => 'panel_bohochic_settings'
+        )
+    );
+
+        $num_category = 3;
+        for ( $i = 1; $i < ($num_category + 1); $i++ ) :
+            // Category 1
+            $wp_customize->add_setting(
+                'set_category_' . $i,
+                array(
+                    'default'           => 0,
+                    'sanitize_callback' => 'absint',
+                )
+            );
+
+            $wp_customize->add_control(
+                new Bohochic_Dropdown_Category_Control( $wp_customize,
+                    'set_category_' . $i,
+                    array(
+                        'section'       => 'sec_homepage_product_categories',
+                        'label'         => esc_html__( 'Select category ' . $i, 'bohochic' ),
+                        'description'   => esc_html__( 'Select the category ' . $i, 'bohochic' ),
+                        'dropdown_args' => array(
+                            'taxonomy' => 'product_cat',
+                            'show_count' => 0,
+                        ),
+                    )
+                )
+            );
+        endfor;
+          
+          
+
 }
 add_action( 'customize_register', 'bohochic_customize_register' );

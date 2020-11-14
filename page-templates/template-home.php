@@ -60,8 +60,38 @@ get_header();
             </div>
         </section><!-- .slider -->
 
-        <section class="product-categories">
-        Product categories
+        <section class="product-categories new-release">
+            <div class="product-categories-wrap new-release__wrap">
+                <?php
+                    for ( $i = 1; $i < 4; $i++ ) :
+
+                        // get category id from customizer setting
+                        $id = get_theme_mod( 'set_category_' . $i );
+
+                        // get the thumbnail id using the queried category term_id
+                        $thumbnail_id = get_term_meta( $id, 'thumbnail_id', true ); 
+                        // get the image URL
+                        $image = wp_get_attachment_url( $thumbnail_id );
+                        // get the category name
+                        $cat_name = get_the_category_by_ID( $id );
+                        // get the category URL
+                        $cat_url = get_category_link( $id );
+
+                        /* $term = get_term( $id, 'product_cat' );
+                        echo $term->count; */
+                ?>
+            
+                    <div class="product-category new-release__item">
+                        <img src="<?php echo $image; ?>" alt="<?php echo $cat_name; ?>">
+                        <div class="new-release__detail">
+                            <h1 class="cat-name"><a href="<?php echo $cat_url; ?>"><?php echo $cat_name; ?></a></h1>
+                        </div>
+                    </div>
+
+                <?php
+                   endfor;
+                ?>
+            </div>
         </section><!-- .product-categories -->
 
         <section class="popular-products">
