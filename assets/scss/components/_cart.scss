@@ -61,54 +61,6 @@
 }
 
 
-.new-release {
-
-    .title,
-    .subtitle {
-        background-color: getColor("secondary");
-        color: getColor("white");
-        padding: 0.5rem .8rem;
-    }
-    
-    &__wrap {
-        display: flex;
-    }
-    
-    &__item {
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-        width: 33.33%;
-        height: 300px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        //padding: 0 3rem;
-        position: relative;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all .5s ease-in-out;
-        }
-
-        &:hover,
-        &:focus {
-           & > img {
-            transform: scale(1.2);
-           }
-        }
-    }
-
-    &__detail {
-        position: absolute;
-        padding: 0 3rem;
-    }
-}
-
 .new-product {
     margin: 5rem 0;
 
@@ -239,53 +191,5 @@
         opacity: 1;
         top: 100%;
         visibility: visible;
-    }
-}
-
-.new-release {
-
-    .title,
-    .subtitle {
-        background-color: getColor("secondary");
-        color: getColor("white");
-        padding: 0.5rem .8rem;
-    }
-    
-    &__wrap {
-        display: flex;
-    }
-    
-    &__item {
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-        width: 33.33%;
-        height: 300px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        //padding: 0 3rem;
-        position: relative;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all .5s ease-in-out;
-        }
-
-        &:hover,
-        &:focus {
-           & > img {
-            transform: scale(1.2);
-           }
-        }
-    }
-
-    &__detail {
-        position: absolute;
-        padding: 0 3rem;
     }
 }

@@ -28,6 +28,16 @@ Woocommerce override styles
     font-weight: getFontWeight("semi-bold");
     border-radius: 5px;
     width: auto;
+    transform: translateY(0);
+    transition: all .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        box-shadow: 4px 3px 8px 0 rgba(getColor("secondary"), .4);
+        background-color: getColor("primary");
+        color: getColor("white");
+        transform: translateY(-5px);
+    }
 }
 
 .woocommerce {

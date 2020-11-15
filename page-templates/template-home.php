@@ -60,8 +60,8 @@ get_header();
             </div>
         </section><!-- .slider -->
 
-        <section class="product-categories new-release">
-            <div class="product-categories-wrap new-release__wrap">
+        <section class="product-categories">
+            <div class="product-categories-wrap">
                 <?php
                     for ( $i = 1; $i < 4; $i++ ) :
 
@@ -80,13 +80,14 @@ get_header();
                         /* $term = get_term( $id, 'product_cat' );
                         echo $term->count; */
                 ?>
-            
-                    <div class="product-category new-release__item">
-                        <img src="<?php echo $image; ?>" alt="<?php echo $cat_name; ?>">
-                        <div class="new-release__detail">
-                            <h1 class="cat-name"><a href="<?php echo $cat_url; ?>"><?php echo $cat_name; ?></a></h1>
+                    <a href="<?php echo $cat_url; ?>" class="product-category">
+                        <?php if( !empty( $image ) ) : ?>
+                            <img src="<?php echo $image; ?>" alt="<?php echo $cat_name; ?>">
+                        <?php endif; ?>
+                        <div class="product-category-detail">
+                            <h1 class="cat-name"><?php echo $cat_name; ?></h1>
                         </div>
-                    </div>
+                    </a>
 
                 <?php
                    endfor;

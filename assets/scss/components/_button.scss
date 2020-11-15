@@ -10,6 +10,14 @@ button {
     font-weight: getFontWeight("medium");
     border-radius: 5px;
     line-height: 1;
+    transform: translateY(0);
+    transition: all .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        box-shadow: 4px 3px 8px 0 rgba(getColor("secondary"), .4);
+        transform: translateY(-5px);
+    }
 }
 
 .btn {

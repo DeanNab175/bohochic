@@ -190,21 +190,8 @@ function bohochic_customize_register( $wp_customize ) {
     /**
      * ------------------------------------------------------------------------
      */
+    // Custom control dropdown category
     require get_template_directory() . '/inc/customizer-controls/dropdown-category.php';
-    
-    /* $orderby = 'name';
-    $order = 'asc';
-    $hide_empty = false ;
-
-    $cat_args = array(
-        'orderby'    => $orderby,
-        'order'      => $order,
-        'hide_empty' => $hide_empty,
-    );
- 
-    $product_categories = get_terms( 'product_cat', $cat_args ); */
-
-    //var_dump($product_categories);die();
 
     // Homepage product categories settings
     $wp_customize->add_section(
@@ -232,11 +219,11 @@ function bohochic_customize_register( $wp_customize ) {
                     'set_category_' . $i,
                     array(
                         'section'       => 'sec_homepage_product_categories',
-                        'label'         => esc_html__( 'Select category ' . $i, 'bohochic' ),
+                        'label'         => esc_html__( 'Category ' . $i, 'bohochic' ),
                         'description'   => esc_html__( 'Select the category ' . $i, 'bohochic' ),
                         'dropdown_args' => array(
                             'taxonomy' => 'product_cat',
-                            'show_count' => 0,
+                            //'show_count' => 0,
                         ),
                     )
                 )
