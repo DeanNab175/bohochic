@@ -18,15 +18,22 @@
 <div class="content-area">
     <main class="site-main">
         <div class="container">
-            <?php
-            if( have_posts() ) :
-                while( have_posts() ) :
-                    the_post();
+            <div class="row">
+                <section class="col-lg-9 col-md-8 col-12">
+                    <?php
+                    if( have_posts() ) :
+                        while( have_posts() ) :
+                            the_post();
 
-                    get_template_part( 'template-parts/content/content' );
-                endwhile;
-            endif;
-            ?>
+                            get_template_part( 'template-parts/content/content' );
+                        endwhile;
+                    else :
+                        get_template_part( 'template-parts/content/content', 'none' );
+                    endif;
+                    ?>
+                </section>
+                <?php get_sidebar(); ?>
+            </div><!-- .row -->
         </div>
     </main>
 </div><!-- .content-area -->

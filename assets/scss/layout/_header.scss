@@ -115,6 +115,8 @@
         &:hover,
         &:focus {
             color: getColor("primary");
+            box-shadow: none;
+            transform: unset;
         }
     }
 }

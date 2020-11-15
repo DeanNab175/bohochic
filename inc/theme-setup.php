@@ -60,15 +60,55 @@ endif;
 /**
  * Add a sidebar.
  */
+add_action( 'widgets_init', 'bohochic_widgets_init' );
 function bohochic_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Main Sidebar', 'bohochic' ),
-        'id'            => 'sidebar-1',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'bohochic' ),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
+        'name'          => __( 'Bohochic Main Sidebar', 'bohochic' ),
+        'id'            => 'bohochic-sidebar-1',
+        'description'   => __( 'Drag and drop widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Shop Sidebar', 'bohochic' ),
+        'id'            => 'bohochic-sidebar-shop',
+        'description'   => __( 'Drag and drop Woocommerce widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 1', 'bohochic' ),
+        'id'            => 'bohochic-footer-sidebar-1',
+        'description'   => __( 'Drag and drop widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 2', 'bohochic' ),
+        'id'            => 'bohochic-footer-sidebar-2',
+        'description'   => __( 'Drag and drop widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 3', 'bohochic' ),
+        'id'            => 'bohochic-footer-sidebar-3',
+        'description'   => __( 'Drag and drop widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
     ) );
 }
-add_action( 'widgets_init', 'bohochic_widgets_init' );

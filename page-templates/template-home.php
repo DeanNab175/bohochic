@@ -65,9 +65,11 @@ get_header();
                 <?php
                     for ( $i = 1; $i < 4; $i++ ) :
 
+                        
                         // get category id from customizer setting
                         $id = get_theme_mod( 'set_category_' . $i );
-
+                        if( empty( $id ) ) continue;
+                        
                         // get the thumbnail id using the queried category term_id
                         $thumbnail_id = get_term_meta( $id, 'thumbnail_id', true ); 
                         // get the image URL
@@ -115,9 +117,9 @@ get_header();
             </div>
         </section><!-- .new-arrivals -->
 
-        <section class="deal-of-the-week">Deal of the week</section><!-- .deal-of-the-week -->
+        <!-- <section class="deal-of-the-week">Deal of the week</section> --><!-- .deal-of-the-week -->
 
-        <section class="our-blog">Our blog</section><!-- .our-blog -->
+        <!-- <section class="our-blog">Our blog</section> --><!-- .our-blog -->
 
         <!-- <div class="container">
             <?php

@@ -1,0 +1,32 @@
+footer {
+    background-color: getColor('secondary');
+    color: getColor('white');
+    
+    .footer-widgets {
+        padding: 3rem 0 2rem;
+    }
+    
+    .copyright {
+        padding: 2rem 0;
+        border-top: 1px solid rgba(getColor('white'), .2);
+    }
+
+    p {
+        font-size: getFontSize('sm');
+    }
+
+    .footer-nav {
+        .menu {
+            list-style: none;
+
+            .menu-item {
+                font-size: getFontSize('sm');
+                padding: 0 1rem 0 0;
+
+                a {
+                    color: getColor('tertiary');
+                }
+            }
+        }
+    }
+}

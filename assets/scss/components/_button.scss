@@ -16,7 +16,7 @@ button {
     &:hover,
     &:focus {
         box-shadow: 4px 3px 8px 0 rgba(getColor("secondary"), .4);
-        transform: translateY(-5px);
+        transform: translateY(-2px);
     }
 }
 

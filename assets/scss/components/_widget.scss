@@ -1,0 +1,36 @@
+.widget {
+    /* &.widget-wrapper {
+        
+    } */
+
+    .widgettitle {
+        font-family: getFont('secondary');
+        font-size: getFontSize('med');
+        margin: 0 0 1rem;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            font-size: getFontSize('sm');
+
+            a {
+                color: getColor('tertiary');
+            }
+        }
+    }
+
+    p {
+        font-size: getFontSize('sm');
+    }
+
+    &.widget_nav_menu {
+        .menu {
+            flex-direction: column;
+            align-items: flex-start;
+            .menu-item {
+                //display: block;
+            }
+        }
+    }
+}
