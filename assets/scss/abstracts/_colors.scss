@@ -4,20 +4,31 @@ $tertiaryColor: #262625;
 
 $blackColor: #000000; */
 
-$red:       #D9043D;
+/* $red:       #D9043D;
 $pink:      #F20574;
 $dark:      #171026;
 $blue:      #3D78B0;
-$yellow:    #F29F05;
+$yellow:    #F29F05; */
+
+
+$dark_blue:      #010A26;
+$blue:           #0477BF;
+$sky_blue:       #049DD9;
+$teal:           #04D9D9;
+$brown:          #F2A172;
 
 $colors: (
-    "primary":     $blue,
-    "secondary":   $dark,
-    "tertiary":    $red,
+    "primary":      $blue,
+    "secondary":    $dark_blue,
+    "tertiary":     $brown,
+
+    "sky_blue":     $sky_blue,
+    "teal":         $teal,
 
     "black":        #000000,
-    "white":        #f2f2f2,
+    "white":        #ffffff,
     
     "dark-green":     #41593b,
     "grey":         #e0e0e0,
+    "light-grey":        #f2f2f2,
 );

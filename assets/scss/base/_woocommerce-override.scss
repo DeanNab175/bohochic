@@ -23,25 +23,65 @@ Woocommerce override styles
     font-size: getFontSize("sm");
     padding: 1.2rem 2rem;
     text-align: center;
-    background-color: getColor("primary");
+    background: getColor("primary");
+    background: linear-gradient(45deg, rgba(getColor("primary"),1) 0%, rgba(getColor("sky_blue"),1) 49%, rgba(getColor("teal"),1) 100%);
+    box-shadow: 0px 0px 4px 0 rgba(getColor("primary"), .8);
     color: getColor("white");
     font-weight: getFontWeight("semi-bold");
     border-radius: 5px;
     width: auto;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition: all .2s ease-in-out;
 
     &:hover,
     &:focus {
-        box-shadow: 4px 3px 8px 0 rgba(getColor("secondary"), .4);
-        background-color: getColor("primary");
+        background: getColor("primary");
+        background: linear-gradient(45deg, rgba(getColor("primary"),1) 0%, rgba(getColor("sky_blue"),1) 49%, rgba(getColor("teal"),1) 100%);
         color: getColor("white");
-        transform: translateY(-2px);
+        box-shadow: 3px 3px 8px 0 rgba(getColor("primary"), .8);
+        transform: translate3d(0, -2px, 0);
     }
 }
 
+.woocommerce a.button.checkout,
+.woocommerce button.button {
+    background: getColor("secondary");
+    font-size: getFontSize("sm");
+    color: getColor("white");
+    box-shadow: 0px 0px 4px 0 rgba(getColor("secondary"), .5);
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background: getColor("secondary");
+        color: getColor("white");
+        box-shadow: 3px 3px 8px 0 rgba(getColor("secondary"), .5);
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+    color: getColor("light-grey");
+    background: rgba(getColor("secondary"), .5);
+}
+
+
+// Woocommerce products
 .woocommerce {
     ul.products li.product {
+        text-align: center;
 
         // Product title
         .woocommerce-loop-product__title {
@@ -96,6 +136,15 @@ Woocommerce override styles
             color: getColor("secondary");
         }
     }
+}
+
+
+// Woocommerce form elements
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    width: auto;
 }
 
 

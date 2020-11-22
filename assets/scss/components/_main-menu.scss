@@ -90,22 +90,29 @@
         &.active {
             .nav-link {
                 color: getColor("primary");
+                font-weight: getFontWeight("semi-bold");
+                border-bottom-color: getColor("primary");
             }
         }
     }
 
+    &.navbar-expand-md .navbar-nav .nav-link {
+        padding: .5rem 0;
+    }
+
     .nav-link {
         color: getColor("secondary");
-        font-weight: getFontWeight("semi-bold");
+        font-weight: getFontWeight("regular");
         font-size: getFontSize("sm");
         line-height: 1;
         letter-spacing: calcLetterSpacing(75);
-        padding: 1.5rem;
+        border-bottom: 1px solid transparent;
         transition: background-color .1s ease-in-out;
 
         &:hover,
         &:focus {
-            background-color: rgba(getColor("white"), .1);
+            color: getColor("primary");
+            border-bottom-color: getColor("primary");
         } 
     }
 }
@@ -129,7 +136,6 @@
     width: 100%;
     left: 0;
     z-index: 12;
-    background-color: getColor("white");
     padding: 0 0 2rem 0;
     
     @include media-breakpoint-up(md) {

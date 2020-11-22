@@ -1,12 +1,17 @@
 .section-title {
     font-size: getFontSize('xl');
     font-weight: getFontWeight('bold');
-    margin: 3rem 0;
+    margin: 3rem 0 5rem;
     text-align: center;
     color: getColor('secondary');
 }
 
-.shop-content {
+.sec-box {
+    margin: 6rem 0;
+}
+
+.shop-content,
+.content-area {
     padding: 3rem 0 3rem;
 }
 

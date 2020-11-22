@@ -44,7 +44,7 @@ get_header();
                                         <div class="slide__details-wrap">
                                             <h2 class="slide__title"><?php the_title(); ?></h2>
                                             <div class="slide__desc"><?php the_content(); ?></div>
-                                            <a href="<?php echo $slider_button_url[$j]; ?>" class="slide__btn btn btn-primary btn--reg">
+                                            <a href="<?php echo $slider_button_url[$j]; ?>" class="slide__btn btn btn--gradient-primary btn--reg">
                                                 <?php echo $slider_button_text[$j]; ?>
                                             </a>
                                         </div>
@@ -97,7 +97,7 @@ get_header();
             </div>
         </section><!-- .product-categories -->
 
-        <section class="popular-products">
+        <section class="sec-box popular-products">
             <div class="container">
                 <?php
                     $popular_limit      = get_theme_mod( 'set_popular_max_num', 4 );
@@ -110,7 +110,7 @@ get_header();
             </div>
         </section><!-- .popular-products -->
 
-        <section class="new-arrivals">
+        <section class="sec-box new-arrivals">
             <div class="container">
                 <h2 class="section-title"><?php _e('New arrivals', 'bohochic'); ?></h2>
                 <?php echo do_shortcode( '[products limit="'. $new_arrivals_limit .'" columns="'. $new_arrivals_col .'" orderby="date"]' ); ?>

@@ -111,12 +111,23 @@
         font-size: 1.7rem;
         border-radius: 0;
         color: getColor("black");
+        position: relative;
 
         &:hover,
         &:focus {
             color: getColor("primary");
             box-shadow: none;
             transform: unset;
+        }
+
+        .badge.item {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            border-radius: 50%;
+            font-size: 70%;
+            background-color: getColor("tertiary");
+            color: getColor("secondary");
         }
     }
 }

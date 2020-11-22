@@ -1,0 +1,61 @@
+body.woocommerce-cart {
+
+    .post-head {
+        h1 {
+            font-family: getFont("secondary");
+            font-size: getFontSize("xl");
+            margin: 2rem 0;
+            color: getColor("tertiary");
+        }
+    }
+
+    table.cart {
+        border-color: getColor("secondary");
+
+        a {
+            color: getColor("primary");
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        
+        td {
+            border-color: getColor("secondary");
+            font-size: getFontSize("sm");
+        }
+
+        thead {
+            background-color: getColor("secondary");
+            color: getColor("white");
+        }
+
+        th {
+            font-weight: getFontWeight("semi-bold");
+            padding: 1rem;
+            font-size: getFontSize("sm");
+        }
+
+        .amount {
+            font-weight: getFontWeight("bold");
+        }
+    }
+
+    .coupon {
+        button {
+            background-color: getColor("secondary");
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        text-align: right;
+
+        a.checkout-button {
+            display: inline-block;
+            font-size: getFontSize("sm");
+        }
+    }
+
+}
