@@ -76,7 +76,7 @@
     .nav-item {
         //border-bottom: 1px solid rgba(getColor("dark-green"), .4);
         display: inline-block;
-        margin: 0 1rem;
+        margin: 0 1.5rem;
         
         &:not(:last-child) {
             border-bottom: 1px solid getColor("black");
@@ -101,9 +101,9 @@
     }
 
     .nav-link {
-        color: getColor("secondary");
+        color: getColor("tertiary");
         font-weight: getFontWeight("regular");
-        font-size: getFontSize("sm");
+        font-size: getFontSize("med");
         line-height: 1;
         letter-spacing: calcLetterSpacing(75);
         border-bottom: 1px solid transparent;
@@ -111,8 +111,8 @@
 
         &:hover,
         &:focus {
-            color: getColor("primary");
-            border-bottom-color: getColor("primary");
+            color: getColor("secondary");
+            border-bottom-color: getColor("secondary");
         } 
     }
 }
@@ -137,11 +137,13 @@
     left: 0;
     z-index: 12;
     padding: 0 0 2rem 0;
+    background-color: getColor("light-grey");
     
     @include media-breakpoint-up(md) {
         margin: 0 2rem 0 0;
         position: static;
         padding: 0;
+        background-color: transparent;
     }
 
     &.navbar-collapse {

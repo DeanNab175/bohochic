@@ -14,20 +14,26 @@
             <div class="container">
                 <div class="row">
                     <?php if( is_active_sidebar( 'bohochic-footer-sidebar-1' ) ) : ?>
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-3 col-12">
                             <?php dynamic_sidebar( 'bohochic-footer-sidebar-1' ); ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if( is_active_sidebar( 'bohochic-footer-sidebar-2' ) ) : ?>
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-3 col-12">
                             <?php dynamic_sidebar( 'bohochic-footer-sidebar-2' ); ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if( is_active_sidebar( 'bohochic-footer-sidebar-3' ) ) : ?>
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-3 col-12">
                             <?php dynamic_sidebar( 'bohochic-footer-sidebar-3' ); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if( is_active_sidebar( 'bohochic-footer-sidebar-4' ) ) : ?>
+                        <div class="col-md-3 col-12">
+                            <?php dynamic_sidebar( 'bohochic-footer-sidebar-4' ); ?>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -36,18 +42,14 @@
 
         <section class="copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <p>© <?php echo date('Y'); ?> Bohochic Boutique. All Rights Reserved.</>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Copyright © <?php echo date('Y'); ?> <a href="<?php echo home_url( '/' ); ?>">Bohochic Boutique</a>. All Rights Reserved.</p>
                     </div>
-                    <div class="col-md-8">
-                        <nav class="footer-nav">
-                            <?php
-                                $args = array(
-                                    'theme_location'    => 'bohochic_footer_menu',
-                                );
-                                wp_nav_menu( $args );
-                            ?>
+                    <div class="col-md-6">
+                        <nav class="footer-social-links">
+                            <a href="#"><span class="bc-facebook"></span></a>
+                            <a href="#"><span class="bc-instagram"></span></a>
                         </nav>
                     </div>
                 </div>

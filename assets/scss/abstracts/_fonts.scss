@@ -1,18 +1,18 @@
 /*-------------------------
 Google Fonts
 -------------------------*/
-$quicksandFont:    'Quicksand', sans-serif;
-$paytoneFont:    'Paytone One', sans-serif;
-$leckerliFont:    'Leckerli One', cursive;
+$gaeguFont:         'Gaegu', cursive;
+$mansalvaFont:      'Mansalva', cursive;
+$meriendaFont:      'Merienda One', cursive;
 
 /*-------------------------
 Fonts family
 -------------------------*/
 
 $fonts: (
-    "primary":      $quicksandFont,
-    "secondary":    $paytoneFont,
-    "tertiary":     $leckerliFont,
+    "primary":      $gaeguFont,
+    "secondary":    $mansalvaFont,
+    "tertiary":     $meriendaFont,
 );
 
 /*-------------------------

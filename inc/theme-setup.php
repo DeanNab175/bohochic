@@ -111,4 +111,14 @@ function bohochic_widgets_init() {
         'before_title'  => '<h4 class="widgettitle">',
         'after_title'   => '</h4>',
     ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 4', 'bohochic' ),
+        'id'            => 'bohochic-footer-sidebar-4',
+        'description'   => __( 'Drag and drop widgets here.', 'bohochic' ),
+        'before_widget' => '<section id="%1$s" class="widget widget-wrapper %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) );
 }

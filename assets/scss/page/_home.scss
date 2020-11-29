@@ -1,5 +1,6 @@
 .section-title {
-    font-size: getFontSize('xl');
+    font-family: getFont("secondary");
+    font-size: 3.6rem;
     font-weight: getFontWeight('bold');
     margin: 3rem 0 5rem;
     text-align: center;
@@ -10,8 +11,8 @@
     margin: 6rem 0;
 }
 
-.shop-content,
-.content-area {
+.shop-content/* ,
+.content-area */ {
     padding: 3rem 0 3rem;
 }
 
@@ -19,9 +20,13 @@
 .product-categories {
 
     .cat-name {
-        background-color: getColor("white");
-        color: getColor("secondary");
-        padding: 0.5rem .8rem;
+        background-color: rgba(getColor("white"), .9);
+        color: getColor("primary");
+        font-size: getFontSize("xl");
+        padding: 0.5rem 1.7rem;
+        display: inline-block;
+        border-radius: 4px;
+        transition: all .5s ease-in-out;
     }
     
     .product-categories-wrap {
@@ -64,11 +69,17 @@
            & > img {
             transform: scale(1.2);
            }
+
+           .cat-name {
+                background-color: rgba(getColor("white"), .5);
+           }
         }
     }
 
     .product-category-detail {
         position: absolute;
-        padding: 0 3rem;
+        left: 0;
+        right: 0;
+        text-align: center;
     }
 }

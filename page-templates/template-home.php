@@ -44,7 +44,7 @@ get_header();
                                         <div class="slide__details-wrap">
                                             <h2 class="slide__title"><?php the_title(); ?></h2>
                                             <div class="slide__desc"><?php the_content(); ?></div>
-                                            <a href="<?php echo $slider_button_url[$j]; ?>" class="slide__btn btn btn--gradient-primary btn--reg">
+                                            <a href="<?php echo $slider_button_url[$j]; ?>" class="slide__btn btn btn-secondary btn--reg">
                                                 <?php echo $slider_button_text[$j]; ?>
                                             </a>
                                         </div>

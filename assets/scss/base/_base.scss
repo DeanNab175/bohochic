@@ -23,3 +23,42 @@ body {
     color: getColor("black");
     background-color: getColor("light-grey");
 }
+
+
+table {
+    border-color: getColor("secondary");
+
+    &.shop_table {
+        border-color: getColor("secondary");
+    }
+
+    a {
+        color: getColor("primary");
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+    
+    td {
+        border-color: getColor("secondary");
+        font-size: getFontSize("sm");
+    }
+
+    thead {
+        background-color: getColor("secondary");
+        color: getColor("white");
+    }
+
+    th {
+        font-weight: getFontWeight("semi-bold");
+        padding: 1rem;
+        font-size: getFontSize("sm");
+    }
+
+    .amount {
+        font-weight: getFontWeight("bold");
+    }
+}

@@ -1,7 +1,7 @@
 .main-header {
-    padding: 1rem 0;
-    background-color: getColor("white");
-    transition: padding .3s ease-in-out;
+    padding: .5rem 0;
+    background-color: rgba(getColor("light-grey"), 1);
+    transition: all .3s ease-in-out;
     //background: linear-gradient(90deg, rgba(22,18,43,1) 0%, rgba(46,53,106,1) 38%, rgba(35,92,159,1) 100%);
 
     &.sticky {
@@ -11,10 +11,11 @@
         width: 100%;
         z-index: 20;
         padding: .5rem 0;
+        box-shadow: 0 2px 8px 0 rgba(getColor("black"), .3);
 
-        .navbar-brand:not(.navbar-brand-text) {
+        /* .navbar-brand:not(.navbar-brand-text) {
             width: 65px;
-        }
+        } */
     }
 }
 
@@ -27,7 +28,7 @@
 }
 
 .navbar-brand {
-    width: 80px;
+    width: 65px;
     transition: width .3s ease-in-out;
 
     
@@ -110,7 +111,7 @@
     &__btn {
         font-size: 1.7rem;
         border-radius: 0;
-        color: getColor("black");
+        color: getColor("tertiary");
         position: relative;
 
         &:hover,
@@ -126,8 +127,8 @@
             right: -3px;
             border-radius: 50%;
             font-size: 70%;
-            background-color: getColor("tertiary");
-            color: getColor("secondary");
+            background-color: getColor("secondary");
+            color: getColor("light-grey");
         }
     }
 }

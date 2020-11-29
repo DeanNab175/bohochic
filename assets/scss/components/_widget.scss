@@ -1,31 +1,39 @@
 .widget {
-    /* &.widget-wrapper {
-        
-    } */
+    &.widget-wrapper {
+        padding: 0 2rem 0 0;
+    }
 
     .widgettitle {
-        font-family: getFont('secondary');
-        font-size: getFontSize('med');
-        margin: 0 0 1rem;
+        font-family: getFont('primary');
+        font-size: 2.4rem;
+        font-weight: getFontWeight("bold");
+        color: getColor("primary");
+        margin: 0 0 2rem;
     }
 
     ul {
         list-style: none;
         li {
-            font-size: getFontSize('sm');
+            font-size: getFontSize('def');
 
             a {
-                color: getColor('tertiary');
-                &:hover,
-                &:focus {
-                    color: getColor('white');
-                }
+                color: getColor('light-grey');
             }
         }
     }
 
     p {
-        font-size: getFontSize('sm');
+        font-size: getFontSize('def');
+        font-weight: getFontWeight("bold");
+        line-height: 1.2;
+
+        i {
+            font-size: getFontSize('xs');
+        }
+    }
+
+    a {
+        color: getColor("light-grey");
     }
 
     &.widget_nav_menu {
