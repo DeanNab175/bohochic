@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'bohochic';
-  src:  url('../fonts/bohochic.eot?okhthz');
-  src:  url('../fonts/bohochic.eot?okhthz#iefix') format('embedded-opentype'),
-    url('../fonts/bohochic.ttf?okhthz') format('truetype'),
-    url('../fonts/bohochic.woff?okhthz') format('woff'),
-    url('../fonts/bohochic.svg?okhthz#bohochic') format('svg');
+  src:  url('../fonts/bohochic.eot?1a7jqd');
+  src:  url('../fonts/bohochic.eot?1a7jqd#iefix') format('embedded-opentype'),
+    url('../fonts/bohochic.ttf?1a7jqd') format('truetype'),
+    url('../fonts/bohochic.woff?1a7jqd') format('woff'),
+    url('../fonts/bohochic.svg?1a7jqd#bohochic') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,30 +25,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bc-paper-plane:before {
-  content: "\e900";
-}
-.bc-instagram:before {
-  content: "\e904";
-}
-.bc-facebook:before {
-  content: "\e905";
-}
-.bc-cart:before {
-  content: "\e906";
-}
-.bc-search:before {
-  content: "\e907";
-}
-.bc-user:before {
-  content: "\e908";
-}
-.bc-next:before {
-  content: "\e901";
+.bc-right-arrow:before {
+  content: "\e903";
 }
 .bc-prev:before {
   content: "\e902";
 }
-.bc-right-arrow:before {
-  content: "\e903";
+.bc-next:before {
+  content: "\e901";
+}
+.bc-user:before {
+  content: "\e908";
+}
+.bc-search:before {
+  content: "\e907";
+}
+.bc-cart:before {
+  content: "\e906";
+}
+.bc-facebook:before {
+  content: "\e905";
+}
+.bc-instagram:before {
+  content: "\e904";
+}
+.bc-paper-plane:before {
+  content: "\e900";
+}
+.bc-arrow-down:before {
+  content: "\e909";
 }

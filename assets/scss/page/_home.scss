@@ -11,9 +11,16 @@
     margin: 6rem 0;
 }
 
-.shop-content/* ,
-.content-area */ {
+.shop-content {
     padding: 3rem 0 3rem;
+}
+
+.content-area {
+    padding: 0 1rem;
+
+    @include media-breakpoint-up(md) {
+        padding: 0;
+    }
 }
 
 // Product categories section

@@ -21,7 +21,6 @@ body {
     box-sizing: border-box;
     font-family: getFont("primary");
     color: getColor("black");
-    background-color: getColor("light-grey");
 }
 
 
@@ -60,5 +59,23 @@ table {
 
     .amount {
         font-weight: getFontWeight("bold");
+    }
+}
+
+
+select {
+    padding: 0 3rem 0 1rem;
+    line-height: 1;
+    height: 4rem;
+    appearance: none;
+    border-radius: 6px;
+    background: url('../svg/arrow-down.svg') no-repeat 96% 50%;
+    background-size: 7% auto;
+    border-color: getColor("primary");
+    color: getColor("primary");
+
+    &:focus {
+        outline: none;
+        border-width: 2px;
     }
 }

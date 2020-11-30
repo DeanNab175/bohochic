@@ -38,6 +38,15 @@
         stickyMenu($mainMenu);
     });
 
+
+    const $cartBtn = document.querySelector( '.mini-cart .user-cta__cart' );
+    const $headerMiniCart = document.querySelector( '.mini-cart .header-mini-cart' );
+
+    $cartBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        $headerMiniCart.classList.toggle('active');
+    });
+
 })(jQuery);
 
 /*------------------------------------
@@ -62,7 +71,7 @@ function toggleClass( elClass, el ) {
  */
 function stickyMenu(el) {
     const menuHeight = el.offsetHeight;
-    console.log(window.scrollY, menuHeight, el);
+    //console.log(window.scrollY, menuHeight, el);
 
     if( (window.scrollY) > menuHeight ) {
         el.classList.add('sticky');

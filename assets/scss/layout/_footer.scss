@@ -1,9 +1,16 @@
 footer {
     background-color: getColor('tertiary');
     color: getColor('light-grey');
+    margin: 5rem 0 0;
     
     .footer-widgets {
         padding: 5rem 0;
+
+        ul li {
+            a {
+                color: getColor('light-grey');
+            }
+        }
     }
     
     .copyright {
@@ -21,7 +28,12 @@ footer {
         }
 
         .footer-social-links {
-            text-align: right;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                text-align: right;
+            }
+
             a {
                 color: getColor('tertiary');
                 padding: 0 .5rem;
