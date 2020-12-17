@@ -1,0 +1,47 @@
+
+.woocommerce {
+    .checkout {
+        h3 {
+            font-family: getFont("secondary");
+            font-size: getFontSize("xl");
+            margin: 2rem 0;
+            color: getColor("tertiary");
+        }
+
+        .woocommerce-billing-fields__field-wrapper,
+        .woocommerce-additional-fields__field-wrapper {
+            label {
+                font-size: getFontSize("def");
+                line-height: 1;
+            }
+
+            span.woocommerce-input-wrapper {
+                width: 100%;
+
+                input.input-text,
+                textarea {
+                    font-size: getFontSize("def");
+                    padding: 0.3em;
+                    border: none;
+                    border: 1px solid getColor("primary");
+                    border-radius: 3px;
+                    color: getColor("primary");
+                }
+            }
+
+            .select2-container {
+                .select2-selection--single {
+                    height: 31px;
+                    border-color: getColor("primary");
+                    border-radius: 3px;
+
+                    .select2-selection__rendered {
+                        color: getColor("primary");
+                        line-height: 31px;
+                        font-size: getFontSize("def");
+                    }
+                }
+            }
+        }
+    }
+}

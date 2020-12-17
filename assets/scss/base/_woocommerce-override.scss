@@ -68,6 +68,11 @@ Woocommerce override styles
     background: rgba(getColor("secondary"), .5);
 }
 
+// Close button
+.woocommerce a.remove {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 // Woocommerce products
 .woocommerce {

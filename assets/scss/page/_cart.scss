@@ -9,8 +9,19 @@ body.woocommerce-cart {
         }
     }
 
+    table.shop_table,
     table.cart {
-        border-color: getColor("secondary");
+        border-color: rgba(getColor("secondary"), .2);
+
+        td,
+        th {
+            border-color: rgba(getColor("secondary"), .2);
+            font-size: getFontSize("def");
+        }
+    }
+
+
+    table.cart {
 
         a {
             color: getColor("primary");
@@ -20,11 +31,13 @@ body.woocommerce-cart {
             &:focus {
                 text-decoration: underline;
             }
-        }
-        
-        td {
-            border-color: getColor("secondary");
-            font-size: getFontSize("sm");
+
+            &.remove {
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
         }
 
         thead {
@@ -35,17 +48,57 @@ body.woocommerce-cart {
         th {
             font-weight: getFontWeight("semi-bold");
             padding: 1rem;
-            font-size: getFontSize("sm");
+            font-size: getFontSize("l");
         }
 
         .amount {
             font-weight: getFontWeight("bold");
         }
+
+        td.actions {
+            .coupon {
+                .input-text {
+                    font-size: getFontSize("med");
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 3px;
+                    padding: 6px 10px 5px;
+                }
+            }
+        }
     }
+
 
     .coupon {
         button {
             background-color: getColor("secondary");
+        }
+    }
+
+    .cart-collaterals .cart_totals table.shop_table {
+        th,
+        td {
+            font-size: getFontSize("med");
+            border-color: rgba(getColor("secondary"), .2);
+        }
+
+        th {
+            font-weight: getFontWeight("semi-bold");
+        }
+
+        .order-total {
+            th,
+            td {
+                font-size: getFontSize("xl");
+            }
+        }
+    }
+
+    .cart_totals {
+        h2 {
+            font-size: getFontSize("xl");
+            font-weight: getFontWeight("bold");
+            color: getColor("primary");
         }
     }
 
@@ -54,7 +107,17 @@ body.woocommerce-cart {
 
         a.checkout-button {
             display: inline-block;
-            font-size: getFontSize("sm");
+            font-size: getFontSize("med");
+            padding: 0.7em 1em;
+            border-radius: 3px;
+            background-color: getColor("tertiary");
+            color: getColor("primary");
+
+            &:hover,
+            &:focus {
+                background-color: getColor("primary");
+                color: getColor("tertiary");
+            }
         }
     }
 
