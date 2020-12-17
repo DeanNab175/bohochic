@@ -32,10 +32,10 @@ function bohochic_customize_register( $wp_customize ) {
         )
     );
         $num_silde = 3;
-        for ( $i = 1; $i < ($num_silde + 1); $i++ ) :
+        for ( $i = 0; $i < $num_silde; $i++ ) :
             // Field 1 - Slider page number 1
             $wp_customize->add_setting(
-                'set_slider_page' . $i,
+                'set_slider_page' . ($i+1),
                 array(
                     'type'                  => 'theme_mod',
                     'default'               => '',
@@ -44,10 +44,10 @@ function bohochic_customize_register( $wp_customize ) {
             );
 
             $wp_customize->add_control(
-                'set_slider_page' . $i,
+                'set_slider_page' . ($i+1),
                 array(
-                    'label'             => __('Set slide ' . $i, 'bohochic'),
-                    'description'       => __('Select your page for the slide ' . $i, 'bohochic'),
+                    'label'             => __('Set slide ' . ($i+1), 'bohochic'),
+                    'description'       => __('Select your page for the slide', 'bohochic'),
                     'section'           => 'sec_slider',
                     'type'              => 'dropdown-pages'
                 )
@@ -55,7 +55,7 @@ function bohochic_customize_register( $wp_customize ) {
 
             // Field 2 - Slider button text number 1
             $wp_customize->add_setting(
-                'set_slider_button_text' . $i,
+                'set_slider_button_text' . ($i+1),
                 array(
                     'type'                  => 'theme_mod',
                     'default'               => '',
@@ -64,10 +64,10 @@ function bohochic_customize_register( $wp_customize ) {
             );
 
             $wp_customize->add_control(
-                'set_slider_button_text' . $i,
+                'set_slider_button_text' . ($i+1),
                 array(
-                    'label'             => __('Button text for slide ' . $i, 'bohochic'),
-                    'description'       => __('Add your button text for the slide ' . $i, 'bohochic'),
+                    'label'             => __('Button text for slide ' . ($i+1), 'bohochic'),
+                    'description'       => __('Add your button text for the slide', 'bohochic'),
                     'section'           => 'sec_slider',
                     'type'              => 'text'
                 )
@@ -75,7 +75,7 @@ function bohochic_customize_register( $wp_customize ) {
 
             // Field 3 - Slider button url number 1
             $wp_customize->add_setting(
-                'set_slider_button_url' . $i,
+                'set_slider_button_url' . ($i+1),
                 array(
                     'type'                  => 'theme_mod',
                     'default'               => '',
@@ -84,10 +84,10 @@ function bohochic_customize_register( $wp_customize ) {
             );
 
             $wp_customize->add_control(
-                'set_slider_button_url' . $i,
+                'set_slider_button_url' . ($i+1),
                 array(
-                    'label'             => __('Button url for slide ' . $i, 'bohochic'),
-                    'description'       => __('Add your button url for the slide ' . $i, 'bohochic'),
+                    'label'             => __('Button url for slide ' . ($i+1), 'bohochic'),
+                    'description'       => __('Add your button url for the slide', 'bohochic'),
                     'section'           => 'sec_slider',
                     'type'              => 'url'
                 )
@@ -204,10 +204,10 @@ function bohochic_customize_register( $wp_customize ) {
     );
 
         $num_category = 3;
-        for ( $i = 1; $i < ($num_category + 1); $i++ ) :
+        for ( $i = 0; $i < $num_category; $i++ ) :
             // Category 1
             $wp_customize->add_setting(
-                'set_category_' . $i,
+                'set_category_' . ($i+1),
                 array(
                     'default'           => 0,
                     'sanitize_callback' => 'absint',
@@ -216,11 +216,11 @@ function bohochic_customize_register( $wp_customize ) {
 
             $wp_customize->add_control(
                 new Bohochic_Dropdown_Category_Control( $wp_customize,
-                    'set_category_' . $i,
+                    'set_category_' . ($i+1),
                     array(
                         'section'       => 'sec_homepage_product_categories',
-                        'label'         => esc_html__( 'Category ' . $i, 'bohochic' ),
-                        'description'   => esc_html__( 'Select the category ' . $i, 'bohochic' ),
+                        'label'         => esc_html__( 'Category ' . ($i+1), 'bohochic' ),
+                        'description'   => esc_html__( 'Select the category.', 'bohochic' ),
                         'dropdown_args' => array(
                             'taxonomy' => 'product_cat',
                             //'show_count' => 0,

@@ -13,21 +13,22 @@ get_header();
             <!-- Owl carousel -->
             <div class="owl-carousel">
                 <?php
-                    for ( $i = 1; $i < 4; $i++ ) : 
-                        $slider_page[$i] = get_theme_mod( 'set_slider_page' . $i );
-                        $slider_button_text[$i] = get_theme_mod( 'set_slider_button_text' . $i );
-                        $slider_button_url[$i] = get_theme_mod( 'set_slider_button_url' . $i );
+                    for ( $i = 0; $i < 3; $i++ ) : 
+                        $slider_page[$i] = get_theme_mod( 'set_slider_page' . ($i+1) );
+
+                        $slider_buttons[get_theme_mod( 'set_slider_page' . ($i+1) )]['text'] = get_theme_mod( 'set_slider_button_text' . ($i+1) );
+                        $slider_buttons[get_theme_mod( 'set_slider_page' . ($i+1) )]['url'] = get_theme_mod( 'set_slider_button_url' . ($i+1) );
                     endfor;
 
                     $args = array(
                         'post_type'         => 'page',
                         'posts_per_page'    => 3,
                         'post__in'          => $slider_page,
-                        'order_by'          => 'post__in'
+                        'order_by'          => 'post__in',
                     );
 
                     $slider_loop = new WP_Query( $args );
-                    $j = 1;
+                    $j = 0;
                     if( $slider_loop->have_posts() ) :
                         while( $slider_loop->have_posts() ) :
                             $slider_loop->the_post();
@@ -44,8 +45,8 @@ get_header();
                                         <div class="slide__details-wrap">
                                             <h2 class="slide__title"><?php the_title(); ?></h2>
                                             <div class="slide__desc"><?php the_content(); ?></div>
-                                            <a href="<?php echo $slider_button_url[$j]; ?>" class="slide__btn btn btn-secondary btn--reg">
-                                                <?php echo $slider_button_text[$j]; ?>
+                                            <a href="<?php echo $slider_buttons[get_the_ID()]['url']; ?>" class="slide__btn btn btn-secondary btn--reg">
+                                                <?php echo $slider_buttons[get_the_ID()]['text']; ?>
                                             </a>
                                         </div>
                                     </div>
@@ -63,11 +64,11 @@ get_header();
         <section class="product-categories">
             <div class="product-categories-wrap">
                 <?php
-                    for ( $i = 1; $i < 4; $i++ ) :
+                    for ( $i = 0; $i < 3; $i++ ) :
 
                         
                         // get category id from customizer setting
-                        $id = get_theme_mod( 'set_category_' . $i );
+                        $id = get_theme_mod( 'set_category_' . ($i+1) );
                         if( empty( $id ) ) continue;
                         
                         // get the thumbnail id using the queried category term_id
