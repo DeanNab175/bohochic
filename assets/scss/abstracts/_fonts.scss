@@ -4,15 +4,16 @@ Google Fonts
 $gaeguFont:         'Gaegu', cursive;
 $mansalvaFont:      'Mansalva', cursive;
 $meriendaFont:      'Merienda One', cursive;
+$oxygenFont:        'Oxygen', sans-serif;
 
 /*-------------------------
 Fonts family
 -------------------------*/
 
 $fonts: (
-    "primary":      $gaeguFont,
+    "primary":      $oxygenFont,
     "secondary":    $mansalvaFont,
-    "tertiary":     $meriendaFont,
+    "tertiary":     $gaeguFont,
 );
 
 /*-------------------------

@@ -24,7 +24,7 @@ footer {
 
         a {
             color: getColor('secondary');
-            font-size: getFontSize('def');
+            font-size: getFontSize('xs');
         }
 
         .footer-social-links {
@@ -50,7 +50,7 @@ footer {
     }
 
     p {
-        font-size: getFontSize('def');
+        font-size: getFontSize('xs');
     }
 
     .footer-nav {

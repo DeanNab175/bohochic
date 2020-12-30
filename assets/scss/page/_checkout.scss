@@ -11,7 +11,7 @@
         .woocommerce-billing-fields__field-wrapper,
         .woocommerce-additional-fields__field-wrapper {
             label {
-                font-size: getFontSize("def");
+                font-size: getFontSize("sm");
                 line-height: 1;
             }
 
@@ -20,8 +20,8 @@
 
                 input.input-text,
                 textarea {
-                    font-size: getFontSize("def");
-                    padding: 0.3em;
+                    font-size: getFontSize("sm");
+                    padding: 0.5em;
                     border: none;
                     border: 1px solid getColor("primary");
                     border-radius: 3px;
@@ -38,9 +38,74 @@
                     .select2-selection__rendered {
                         color: getColor("primary");
                         line-height: 31px;
+                        font-size: getFontSize("sm");
+                    }
+                }
+            }
+        }
+
+        #order_review_heading {
+            padding: 0 2rem;
+        }
+
+        .woocommerce-checkout-review-order {
+            padding: 0 2rem;
+
+            table.shop_table {
+                border-collapse: collapse;
+                border-color: rgba(getColor("secondary"), .2);
+
+                td,
+                th {
+                    border-color: rgba(getColor("secondary"), .2);
+                    font-size: getFontSize("sm");
+                }
+
+                th {
+                    font-weight: getFontWeight("semi-bold");
+                    padding: 1rem;
+                    font-size: getFontSize("med");
+                }
+
+                .cart-subtotal {
+                    td,
+                    th {
                         font-size: getFontSize("def");
                     }
                 }
+
+                .order-total {
+                    td,
+                    th {
+                        font-size: getFontSize("l");
+                    }
+                }
+            }
+
+            .woocommerce-checkout-payment {
+                .wc_payment_method {
+                    label {
+                        font-size: getFontSize("def");
+                    }
+
+                }
+            }
+            
+            #payment {
+                background-color: transparent;
+
+                .payment_box  {
+                    font-size: getFontSize("xs");
+                }
+                
+                #place_order {
+                    float: none;
+                }
+            }
+
+            .form-row.place-order {
+                display: block;
+
             }
         }
     }

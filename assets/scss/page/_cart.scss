@@ -1,13 +1,13 @@
-body.woocommerce-cart {
-
-    .post-head {
-        h1 {
-            font-family: getFont("secondary");
-            font-size: getFontSize("xl");
-            margin: 2rem 0;
-            color: getColor("tertiary");
-        }
+.post-head {
+    h1 {
+        font-family: getFont("secondary");
+        font-size: getFontSize("xxl");
+        margin: 2rem 0;
+        color: getColor("primary");
     }
+}
+
+body.woocommerce-cart {
 
     table.shop_table,
     table.cart {
@@ -16,7 +16,7 @@ body.woocommerce-cart {
         td,
         th {
             border-color: rgba(getColor("secondary"), .2);
-            font-size: getFontSize("def");
+            font-size: getFontSize("sm");
         }
     }
 
@@ -46,9 +46,9 @@ body.woocommerce-cart {
         }
 
         th {
-            font-weight: getFontWeight("semi-bold");
+            font-weight: getFontWeight("bold");
             padding: 1rem;
-            font-size: getFontSize("l");
+            font-size: getFontSize("med");
         }
 
         .amount {
@@ -58,7 +58,7 @@ body.woocommerce-cart {
         td.actions {
             .coupon {
                 .input-text {
-                    font-size: getFontSize("med");
+                    font-size: getFontSize("sm");
                     height: 40px;
                     line-height: 40px;
                     border-radius: 3px;
@@ -78,24 +78,25 @@ body.woocommerce-cart {
     .cart-collaterals .cart_totals table.shop_table {
         th,
         td {
-            font-size: getFontSize("med");
+            font-size: getFontSize("def");
             border-color: rgba(getColor("secondary"), .2);
         }
 
         th {
-            font-weight: getFontWeight("semi-bold");
+            font-weight: getFontWeight("bold");
         }
 
         .order-total {
             th,
             td {
-                font-size: getFontSize("xl");
+                font-size: 2.5rem;
             }
         }
     }
 
     .cart_totals {
         h2 {
+            font-family: getFont("secondary");
             font-size: getFontSize("xl");
             font-weight: getFontWeight("bold");
             color: getColor("primary");

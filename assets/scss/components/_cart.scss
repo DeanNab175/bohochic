@@ -109,7 +109,7 @@
 *   Header mini cart
 */
 .site-header-cart {
-    position: relative;
+    //position: relative;
     list-style: none;
     margin: 0;
 
@@ -127,14 +127,12 @@
     .header-mini-cart {
         position: absolute;
         top: 200%;
+        left: 0;
         right: 0;
         z-index: 15;
-        background-color: getColor("light-grey");
         opacity: 0;
-        width: 300px;
+        width: 100%;
         visibility: hidden;
-        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.3);
-        border-radius: 8px;
         transition: all .3s ease-in-out;
 
         &.active {
@@ -150,6 +148,11 @@
 
         .widget_shopping_cart {
             padding: 4rem 2rem 3rem;
+            width: 300px;
+            margin: 0 0 0 auto;
+            box-shadow: 2px 2px 8px 0 rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: getColor("light-grey");
         }
 
         .mini_cart_item {
@@ -186,11 +189,12 @@
             margin: 0 0 2rem;
 
             strong {
-                font-size: getFontSize("sm");
+                font-size: getFontSize("l");
             }
 
             .amount {
-                font-size: getFontSize("med");
+                font-size: getFontSize("l");
+                font-weight: getFontWeight("bold");
                 padding: 0 0 0 1rem;
             }
         }

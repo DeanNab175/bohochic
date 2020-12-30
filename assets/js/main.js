@@ -71,12 +71,16 @@ function toggleClass( elClass, el ) {
  */
 function stickyMenu(el) {
     const menuHeight = el.offsetHeight;
+    const nextEl = el.nextSibling;
     //console.log(window.scrollY, menuHeight, el);
+    //console.log(nextEl, menuHeight);
 
     if( (window.scrollY) > menuHeight ) {
         el.classList.add('sticky');
+        //nextEl.classList.add('sticky-menu-on');
     }
     else {
         el.classList.remove('sticky');
+        //nextEl.classList.remove('sticky-menu-on');
     }
 }

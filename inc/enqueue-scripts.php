@@ -19,7 +19,7 @@ if( ! function_exists( 'bohochic_scripts' ) ) :
 		wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/vendor/fontawesome/all.css', array(), '5.14.0', 'all' );
 	
 		// App & fonts
-		wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap&family=Mansalva&display=swap&family=Merienda+One&display=swap', array(), null, 'all' );
+		wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap&family=Mansalva&display=swap&family=Merienda+One&display=swap&family=Oxygen:wght@300;400;700&display=swap', array(), null, 'all' );
 		wp_enqueue_style( 'bohochic-css', get_template_directory_uri() . '/assets/css/main.min.css', array(), '1.0.0', 'all' );
 	
 		# --- enqueue scripts ---

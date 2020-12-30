@@ -102,7 +102,7 @@
 .user {
     .username {
         font-weight: getFontWeight("regular");
-        font-size: getFontSize("sm");
+        font-size: getFontSize("xs");
         text-transform: capitalize;
     }
 }
@@ -126,9 +126,13 @@
             top: -3px;
             right: -3px;
             border-radius: 50%;
-            font-size: 70%;
+            font-size: 9px;
             background-color: getColor("secondary");
             color: getColor("light-grey");
+            line-height: 1.5;
+            padding: 0;
+            width: 16px;
+            height: 16px;
         }
     }
 }

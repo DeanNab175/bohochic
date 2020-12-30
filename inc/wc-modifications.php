@@ -16,7 +16,7 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
          */
         add_action( 'woocommerce_before_main_content', 'bohochic_open_container_row', 5 );
         function bohochic_open_container_row() {
-            echo '<div class="container shop-content"><div class="row">';
+            echo '<div class="container shop-content"><div class="row no-gutters">';
         }
 
         add_action( 'woocommerce_after_main_content', 'bohochic_close_container_row', 5 );
@@ -36,7 +36,7 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
              */
             add_action( 'woocommerce_before_main_content', 'bohochic_open_sidebar_col', 6 );
             function bohochic_open_sidebar_col() {
-                echo '<div class="sidebar-shop col-12 col-md-3 order-last order-md-first">';
+                echo '<div class="sidebar-shop col-12 col-md-3">';
             }
 
             /**
@@ -62,7 +62,7 @@ if( ! function_exists( 'bohochic_wc_modify' ) ) :
         add_action( 'woocommerce_before_main_content', 'bohochic_open_shop_product_col', 9 );
         function bohochic_open_shop_product_col() {
             if( is_shop() ) :
-                echo '<div class="shop-product col-12 col-md-9 order-md-last order-first">';
+                echo '<div class="shop-product col-12 col-md-9">';
             else :
                 echo '<div class="shop-product col-12">';
             endif;

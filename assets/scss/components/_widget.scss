@@ -6,7 +6,7 @@
     }
 
     .widgettitle {
-        font-family: getFont('primary');
+        font-family: getFont('secondary');
         font-size: 2.4rem;
         font-weight: getFontWeight("bold");
         color: getColor("primary");
@@ -16,7 +16,8 @@
     ul {
         list-style: none;
         li {
-            font-size: getFontSize('def');
+            font-size: getFontSize('sm');
+            margin: 0 0 0.3rem;
 
             a {
                 color: getColor('black');
@@ -25,12 +26,13 @@
     }
 
     p {
-        font-size: getFontSize('def');
-        font-weight: getFontWeight("bold");
-        line-height: 1.2;
+        font-size: getFontSize('sm');
+        font-weight: getFontWeight("regular");
+        line-height: 1.5;
 
         i {
-            font-size: getFontSize('xs');
+            font-size: getFontSize('sm');
+            padding-right: 1rem;
         }
     }
 
@@ -50,6 +52,14 @@
 }
 
 // Shop sidebar
+.shop-content {
+    .no-gutters .sidebar-shop {
+        @include media-breakpoint-up(md) {
+            padding: 0 4rem 0 0;
+        }
+    }
+}
+
 .sidebar-shop {
     .widget.widget-wrapper {
         padding: 2rem;

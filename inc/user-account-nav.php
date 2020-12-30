@@ -40,7 +40,7 @@
                 <span class="badge badge-pill item"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                 <span class="sr-only">cart items</span>
             </a>
-            <div class="header-mini-cart">
+            <div class="header-mini-cart container">
                 <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
             </div>
         </div>
